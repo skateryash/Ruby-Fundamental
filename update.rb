@@ -4,7 +4,7 @@ require_relative 'validation'
 def change_book_details
   puts 'Change Book Details:'
   puts 'Enter Book Name to Change Details:'
-  update_book = gets.chomp.strip.capitalize
+  update_book = titleize(gets.chomp.strip)
 
   # Check if given book exist
   if $books.include?(update_book)
